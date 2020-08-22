@@ -77,10 +77,15 @@ The format of the input file is:
 Example: 
 
 `0 -1 thread1_message1 this is the beginning of a conversation
+
 1 0 thread1_message2 this is in reply to the first message
+
 2 0 thread1_message3 this is also in reply to the first message
+
 3 2 thread1_message4 this is in reply to the third message
+
 4 -1 thread2_message1 this begins a second conversation
+
 5 -1 thread3_message1 this begins a third conversation`
 
 Each line corresponds to a text block (to use the terminology from the paper). The first column should be an integer ID for the block, and the second column is the integer ID of the block's parent (i.e. the message it is in response to), where the parent ID should correspond to an ID of another block in this input file. The parent ID should be -1 if it has no parent.
